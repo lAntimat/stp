@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_notification">notification</string>
+    <string name="key_every_day_events">every_day_events</string>
+    <string name="key_entertainment_events">entertainment_events</string>
+    <string name="key_important_information">important_information</string>
+
+</resources>

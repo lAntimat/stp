@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageViewMain"
+        android:background="@color/md_white_1000"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimaryDark"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/linearLayout"
+            android:layout_toLeftOf="@+id/btnDragOne"
+            android:layout_toStartOf="@+id/btnDragOne">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:text="Молодёжное радио"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="top|left"
+                    android:paddingLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:layout_weight="0.19"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/tvNowPlay"
+                    android:text="СТУДПРОФ.РФ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="top|left"
+                    android:paddingLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollHorizontally="true"
+                    android:layout_below="@+id/tvTitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmallInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:visibility="invisible"
+                    android:layout_alignTop="@+id/tvTitle"
+                    android:layout_toRightOf="@+id/tvTitle"
+                    android:layout_toEndOf="@+id/tvTitle"
+                    android:layout_marginLeft="5dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/Base.Widget.AppCompat.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDragTwo"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_alignTop="@+id/btnDragOne"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            style="@style/Base.Widget.AppCompat.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDragOne"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnDragTwo"
+            android:layout_toStartOf="@+id/btnDragTwo"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

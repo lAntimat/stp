@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Nested screen #1" >
+
+    <PreferenceCategory
+        android:defaultValue="true"
+        android:key="..."
+        android:title="Настройка push сообщений" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="notification"
+        android:summary="Получать уведомления"
+        android:title="Уведомления" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="importantInformation"
+        android:summary=""
+        android:title="Только важные"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="entertainmentEvents"
+        android:summary="NewsDay, #СУББОТА и т.д."
+        android:title="Только передачи" />
+
+    <PreferenceCategory
+        android:defaultValue="true"
+        android:key="..."
+        android:title="Дополнительные настройки" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="notificationSound"
+        android:summary=""
+        android:title="Звук при уведомлении"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="notificationVibro"
+        android:title="Вибрация при уведомлении" />
+
+
+</PreferenceScreen>

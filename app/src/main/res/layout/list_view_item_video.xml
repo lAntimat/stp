@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/ivPic"
+                    android:layout_width="133dp"
+                    android:layout_height="90dp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Текст"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:singleLine="false"
+                    android:padding="4dp"
+                    android:textColor="@color/md_white_1000"
+                    android:background="@color/md_black_1000"
+                    android:layout_gravity="left|bottom" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:paddingRight="8dip"
+                android:paddingLeft="16dip"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="11 сентября 2015"
+                    android:id="@+id/tvDate"
+                    android:textColor="#595959"
+                    android:hapticFeedbackEnabled="false"
+                    android:paddingLeft="5dp"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Название"
+                    android:ellipsize="end"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="#595959"
+                    android:textSize="16dp"
+                    android:textIsSelectable="false"
+                    android:padding="5dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_below="@+id/tvDate"
+                    android:layout_alignLeft="@+id/tvDate"
+                    android:layout_alignStart="@+id/tvDate" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

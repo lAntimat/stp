@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.studprof.studprof" >
+    package="org.sufficientlysecure.htmltextview.example">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- GCM connects to Google Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="ru.lantimat.studprof.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="ru.lantimat.studprof.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive dataf message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="ru.lantimat.studprof.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityFeedScroolView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_activity_feed_scrool_view" >
+        </activity>
+        <activity
+            android:name=".activity.PhotoGallery"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_photo_gallery" >
+            >
+        </activity>
+        <activity
+            android:name=".activity.FullScreenViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_main2" >
+            >
+        </activity>
+        <activity
+            android:name=".activity.ActivityPhoto"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Фото" >
+            >
+        </activity>
+        <activity
+            android:name=".activity.AuthorizationActivity"
+            android:label="@string/title_activity_authorization" >
+        </activity>
+        <activity
+            android:name=".activity.TeamActivity"
+            android:label="@string/title_activity_team" >
+        </activity>
+        <activity
+            android:name=".activity.ActivityActually"
+            android:label="@string/title_activity_collapsing_toolbar" >
+        </activity>
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_pref__activity" >
+        </activity>
+        <activity
+            android:name=".activity.ActivityFeedCollapsingToolbar"
+            android:label="@string/title_activity_activity_feed_collapsing_toolbar" >
+        </activity>
+        <activity
+            android:name=".activity.VideoActivity"
+            android:label="@string/title_activity_video" >
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name=".activity.ActivityMradio"
+            android:label="@string/title_activity_mradio" >
+        </activity>
+
+        <service
+            android:name=".activity.PlayBackService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".activity.ActivityPushBot"
+            android:label="@string/title_activity_activity_push_bot" >
+        </activity>
+
+        <receiver
+            android:name="com.pushbots.google.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="ru.lantimat.studprof" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".activity.CustomHandler" />
+
+        <service android:name="com.pushbots.push.GCMIntentService" />
+
+        <activity
+            android:name=".activity.CommentsActivity"
+            android:label="@string/title_activity_comments"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:label="@string/title_activity_comments"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.PushWithMesageActivity"
+            android:label="@string/title_activity_push_with_mesage" >
+        </activity>
+        <activity
+            android:name=".activity.CommentsLikeActivty"
+            android:label="@string/title_activity_comments_like_activty" >
+        </activity>
+        <activity
+            android:name=".activity.OpenWithStudprofActivty"
+            android:label="@string/title_activity_open_with_studprof_activty" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.xn--d1aucecghm.xn--p1ai" />
+                <data android:host="xn--d1aucecghm.xn--p1ai" />
+                <data android:host="www.студпроф.рф" />
+                <data android:host="студпроф.рф" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityAfisha"
+            android:label="@string/title_activity_afisha" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="searchViewStyle">@style/AppSearchViewStyle</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textCursorDrawable">@drawable/white_cursor</item>
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="searchIcon">@drawable/icon_toolbar_search</item>
+        <item name="closeIcon">@drawable/icon_toolbar_clear</item>
+        <item name="queryHint">@string/search_hint</item>
+        <item name="android:imeActionId">6</item>
+    </style>
+
+    <style name="Material_Action2" parent="@style/Base.TextAppearance.AppCompat.Button">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">36dp</item>
+            <item name="android:minWidth">88dp</item>
+            <item name="android:padding">8dp</item>
+            <item name="android:buttonStyle">@style/Base.Widget.AppCompat.Button</item>
+            <item name="android:background">?attr/selectableItemBackground</item>
+        </style>
+
+    <style name="moreButtonStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:color">@color/primary_dark</item>
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="moreButtonStyle2" >
+    <item name="android:textColor">@color/primary_dark</item>
+    <item name="android:padding">0dp</item>
+    <item name="android:minWidth">88dp</item>
+    <item name="android:minHeight">36dp</item>
+    <item name="android:layout_margin">3dp</item>
+    </style>
+
+</resources>

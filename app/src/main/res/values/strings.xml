@@ -1,0 +1,117 @@
+<resources>
+
+    <string name="app_name">СТУДПРОФ.РФ</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_menu_item_main">Главная</string>
+    <string name="nav_menu_item_actually_news">Актуалочка</string>
+    <string name="nav_menu_item_developments">События</string>
+    <string name="nav_menu_item_photo">Фото</string>
+    <string name="nav_menu_item_video">Видео</string>
+    <string name="nav_menu_item_team">Команда</string>
+    <string name="nav_menu_item_about">Контакты</string>
+    <string name="nav_menu_item_setting">Настройки</string>
+    <string name="nav_menu_item_mradio">Молодёжное радио</string>
+    <string name="nav_menu_item_more_soc_networks">Мы в соцсетях</string>
+    <string name="title_activity_activity_feed">Activity_feed</string>
+    <string name="title_activity_activity_feed_scrool_view">ActivityFeedScroolView</string>
+    <string name="title_activity_photo_gallery">PhotoGallery</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_authorization_activiry">AuthorizationActiviry</string>
+    <string name="title_activity_authorization">AuthorizationActivity</string>
+    <string name="title_windows_auth">Для продолжения авторизации, вам необходимо</string>
+
+
+    <string name="err.msg.updateListView">При обновлении ленты произошла ошибка</string>
+    <string name="err.msg.updateComments">При загрузки данных произошла ошибка, проверьте ваше подключение к сети</string>
+    <string name="err.msg.sendComment">При отправке комментария произошла ошибка</string>
+    <string name="err.msg.sendComment_authorisation">Отправлять комментарии могут только авторизованные пользователи!</string>
+
+    <string name="success.msg.sendComment">Комментарий успешно отправлен</string>
+    <string name="success.msg.editComment">Комментарий успешно изменен</string>
+
+    <string name="edit">Edit</string>
+    <string name="microphone">Microphone</string>
+    <string name="remove">Remove</string>
+    <string name="checked">Checked</string>
+    <string name="search_hint">Поиск...</string>
+    <string name="seetings">Settings</string>
+    <string name="share">Share</string>
+    <string name="donate">Donate</string>
+    <string name="ratee_app">Rate app</string>
+    <string name="add_price_alert">Add price alert</string>
+    <string name="title_activity_activity_details">ActivityDetails</string>
+    <string name="sliding_menu">Sliding menu</string>
+    <string name="exit">Exit</string>
+    <string name="share_text">Stock Quotes - Watch your stocks in material design way!</string>
+    <string name="from">from</string>
+    <string name="drag_drop">   Drag &amp; Drop</string>
+    <string name="sort_ab">Sort alphabetically</string>
+    <string name="stock_details">Stock details</string>
+    <string name="stock_news">News</string>
+    <string name="week">Week</string>
+    <string name="volume">Volume</string>
+    <string name="open">Open</string>
+    <string name="hight">Hight</string>
+    <string name="low">Low</string>
+    <string name="prev_close">Prev Close</string>
+    <string name="eps">EPS</string>
+    <string name="exchange">Exchange</string>
+    <string name="last_trade">Last trade</string>
+    <string name="title_activity_activity_webview">ActivityWebview</string>
+    <string name="grpah_week">week</string>
+    <string name="grpah_month">month</string>
+    <string name="grpah_year">year</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="github">GitHub</string>
+    <string name="copyright">Copyright</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_message">Tiny Stock Quotes is tiny app which allows you follow any NASDAQ stock in simple and comfortable way. It is totally free, open-source and contains no advertising. App is still in beta, so I am open to any feedback.</string>
+    <string name="feedback">Feedback</string>
+    <string name="send_email">Send Email</string>
+
+    <string-array name="sync_frequency_values">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_team">TeamActivity</string>
+    <string name="title_activity_activity_actually_news">Актуалочка 365</string>
+    <string name="title_activity_collapsing_toolbar">CollapsingToolbarActivity</string>
+    <string name="title_activity_pref__activity">Настройки</string>
+    <string name="title_empty">
+
+    </string>
+    <string name="title_activity_activity_feed_collapsing_toolbar">ActivityFeedCollapsingToolbar
+    </string>
+    <string name="title_activity_video">Видео</string>
+    <string name="title_activity_about">Контакты</string>
+    <string name="title_activity_mradio">Молодёжное радио</string>
+    <string name="title_activity_activity_push_bot">ActivityPushBot</string>
+    <string name="title_activity_afisha">AfishaActivity</string>
+    <string name="title_activity_comments">Комментарии</string>
+    <string name="title_activity_feed_back">Оповещения</string>
+    <string name="title_activity_push_with_mesage">PushWithMesageActivity</string>
+    <string name="title_activity_comments_like_activty">CommentsLikeActivty</string>
+    <string name="title_activity_open_with_studprof_activty">СТУДПРОФ.РФ</string>
+    <string name="title_activity_photo_gallery2">PhotoGallery2</string>
+</resources>

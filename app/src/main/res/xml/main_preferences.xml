@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Основные настройки" >
+
+        <!--<ListPreference
+            android:title="Представление списка"
+            android:summary="Вид списка «события»"
+            android:key="listPref"
+            android:defaultValue="1"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+            -->
+
+
+        <Preference
+            android:key="NESTED_KEY1"
+            android:persistent="false"
+            android:title="Уведомления"
+            android:summary="Настройка push сообщений"
+            />
+
+    </PreferenceCategory>
+
+
+
+
+</PreferenceScreen> 

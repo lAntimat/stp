@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="share_items_main">
+            <item>Скопировать ссылку</item>
+            <item>Открыть в браузере</item>
+            <item>Поделиться в...</item>
+        </string-array>
+
+    <string-array name="share_items_full_size_photo">
+        <item>Скопировать ссылку</item>
+        <item>Открыть в браузере</item>
+        <item>Поделиться в...</item>
+        <item>Скачать</item>
+    </string-array>
+
+    <string-array name="more_soc_networks">
+        <item>ВКонтакте</item>
+        <item>Instagram</item>
+        <item>YouTube</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="comments_dialog_items">
+        <item>Ответить</item>
+        <item>Редактировать</item>
+    </string-array>
+
+    <string-array name="feedback_dialog_items">
+        <item>Открыть новость</item>
+        <item>Открыть комментарий</item>
+    </string-array>
+
+    <string-array name="auth_enterAndExit">
+        <item>Войти через ВКонтакте</item>
+        <item>Выйти</item>
+    </string-array>
+
+    <string-array name="search_items">
+        <item>По совпадениям</item>
+        <item>По дате</item>
+    </string-array>
+
+    <string-array name="err_msg_updateListView">
+        <item>Упс, что-то пошло не так, проверьте подключение к интернету</item>
+        <item>Упс, что-то пошло не так, проверьте подключение к интернету</item>
+    </string-array>
+
+
+    <string-array name="listArray">
+        <item>Список</item>
+        <item>Карточки</item>
+    </string-array>
+
+    <string-array name="listValues">
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="listArrayFeed">
+        <item>Без Toolbar</item>
+        <item>Collapsing Toolbar</item>
+    </string-array>
+
+    <string-array name="listValuesFeed">
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="listArrayPush">
+        <item>Все</item>
+        <item>Только важные</item>
+    </string-array>
+
+    <string-array name="listValuesPush">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+
+        <string-array name="listArrayFeed2">
+            <item>...</item>
+            <item>...</item>
+        </string-array>
+
+
+</resources>
