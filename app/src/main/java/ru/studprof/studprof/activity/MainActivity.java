@@ -53,6 +53,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.paginate.Paginate;
 import com.pushbots.push.Pushbots;
+import com.splunk.mint.Mint;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import org.jsoup.Jsoup;
@@ -418,7 +419,12 @@ public class MainActivity extends AppCompatActivity implements  SearchView.OnQue
                 .setLoadingListItemCreator(new CustomLoadingListItemCreator())
                 //.setLoadingListItemSpanSizeLookup(new CustomLoadingListItemSpanLookup())
                 .build();
+
+        //Баг репорты
+        Mint.initAndStartSession(MainActivity.this, "0c2cc97d");
+
     }
+
 
     private void pushWithMessage() {
 
@@ -2052,15 +2058,21 @@ public class MainActivity extends AppCompatActivity implements  SearchView.OnQue
                     swipeRefreshLayoutList.setRefreshing(false);
                     swipeRefreshLayoutCard.setRefreshing(false);
                     tvLoading.setVisibility(View.INVISIBLE);
-                boxAdapter.notifyDataSetChanged();
-                pageLoading = false;
+
+                        boxAdapter.notifyDataSetChanged();
+
+                        pageLoading = false;
 
                 if(loadFromSaved) {
 
                     if (productsCardSave != null & productsCard != null) {
                         if (!productsCardSave.get(0).getName().equals(productsCard.get(0).getName())) {
 
-                            mAdapter.notifyDataSetChanged();
+                            runOnUiThread(new Thread(new Runnable() {
+                                public void run() {
+                                    boxAdapter.notifyDataSetChanged();
+                                }
+                            }));
                             mRecyclerView.smoothScrollToPosition(0);
                             /*Snackbar snackbar = Snackbar
                                     .make(coordinatorLayout, "Есть новые события!", Snackbar.LENGTH_INDEFINITE)
@@ -2079,10 +2091,14 @@ public class MainActivity extends AppCompatActivity implements  SearchView.OnQue
 
                             snackbar.show();*/
                         } else {
-                            mAdapter.notifyDataSetChanged();
+
+                                    boxAdapter.notifyDataSetChanged();
+
                         }
                     }
-                } else mAdapter.notifyDataSetChanged();
+                } else {
+                            boxAdapter.notifyDataSetChanged();
+                }
 
 
                 loadFromSaved = false;

@@ -142,5 +142,6 @@
     <orderEntry type="library" exported="" name="commons-0.8.5.3" level="project" />
     <orderEntry type="library" exported="" name="library-aar-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="paginate-0.5.1" level="project" />
+    <orderEntry type="library" exported="" name="mint-5.0.0" level="project" />
   </component>
 </module>

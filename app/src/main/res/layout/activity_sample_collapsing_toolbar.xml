@@ -178,7 +178,6 @@
                 android:id="@+id/btnVideoAfterText"
                 android:layout_gravity="center_horizontal"
                 style="@style/Material_Button"
-                android:onClick="openComments"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"

@@ -20,6 +20,9 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://mint.splunk.com/gradle/" }
+}
 
 
 
@@ -54,8 +57,7 @@ dependencies {
     compile 'com.github.markomilos:paginate:0.5.1'
     compile 'com.github.castorflex.smoothprogressbar:library:1.0.0'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.0.0'
-
-
+    compile "com.splunk.mint:mint:5.0.0"
 }
 
 

@@ -134,7 +134,8 @@
                 android:layout_below="@+id/tvSubHeader"
                 android:layout_alignLeft="@+id/tvHeader"
                 android:padding="5dp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:adjustViewBounds="true" />
 
         </RelativeLayout>
 

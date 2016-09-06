@@ -388,7 +388,7 @@ public class ActivityFeedCollapsingToolbar extends AppCompatActivity {
                 }
 
 
-                if(loadText("videoAfterTextUrl")!=null) {
+                /*if(loadText("videoAfterTextUrl")!=null) {
                     btnVideoAfterText.setVisibility(View.VISIBLE);
                     btnVideoAfterText.setText("Смотреть: " + loadText("title"));
                     btnVideoAfterText.setOnClickListener(new View.OnClickListener() {
@@ -403,7 +403,7 @@ public class ActivityFeedCollapsingToolbar extends AppCompatActivity {
                             }
                         }
                     });
-                }
+                }*/
 
                 countOfPhotos = loadText("countOfPhotos");
 
@@ -609,7 +609,7 @@ public class ActivityFeedCollapsingToolbar extends AppCompatActivity {
                 //Log.d("videoUrl", videoUrl.get(0).attr("data-video"));
 
 
-                if(videoAfterText.size()>0) {
+                /*if(videoAfterText.size()>0) {
 
 
                     videoAfterTextUrl = videoAfterText.attr("src");
@@ -637,12 +637,12 @@ public class ActivityFeedCollapsingToolbar extends AppCompatActivity {
                         }
                     });
 
-                    saveText(videoAfterTextUrl, "videoAfterTextUrl");
+                    //saveText(videoAfterTextUrl, "videoAfterTextUrl");
 
                     Log.d("TAG", "videoAfterText " + videoAfterTextTitle);
 
 
-                }
+                }*/
 
                 if (videoUrl.size() > 0) {
                     ivPlayButton.setVisibility(View.VISIBLE);

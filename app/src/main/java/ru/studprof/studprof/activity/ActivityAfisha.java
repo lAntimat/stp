@@ -414,10 +414,12 @@ public class ActivityAfisha extends AppCompatActivity implements AdapterView.OnI
 
             tvLoadingMain.setVisibility(View.INVISIBLE);
 
-            if(iventsArea.size()== 1) {
-                tvLoadingMain.setVisibility(View.VISIBLE);
-                tvLoadingMain.setGravity(Gravity.CENTER);
-                tvLoadingMain.setText("На собрания что ль не ходишь?");
+            if(iventsRow!=null) {
+                if (iventsRow.size() == 0) {
+                    tvLoadingMain.setVisibility(View.VISIBLE);
+                    tvLoadingMain.setGravity(Gravity.CENTER);
+                    tvLoadingMain.setText("На собрания что ль не ходишь?");
+                }
             }
 
             swipeRefreshLayout.setRefreshing(false);

@@ -1295,10 +1295,12 @@ public class CommentsActivity extends AppCompatActivity implements AdapterView.O
             progressBarToolbar.setVisibility(View.GONE);
 
             tvLoadingMain.setVisibility(View.INVISIBLE);
-            if(commentId.size()==0) {
-                tvLoadingMain.setVisibility(View.VISIBLE);
-                tvLoadingMain.setGravity(Gravity.CENTER);
-                tvLoadingMain.setText("Комментариев пока никто не оставлял. Будьте первым!");
+            if(commentId!=null) {
+                if (commentId.size() == 0) {
+                    tvLoadingMain.setVisibility(View.VISIBLE);
+                    tvLoadingMain.setGravity(Gravity.CENTER);
+                    tvLoadingMain.setText("Комментариев пока никто не оставлял. Будьте первым!");
+                }
             }
 
             swipeRefreshLayout.setRefreshing(false);
