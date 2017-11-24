@@ -1,142 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/MainLayout">
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MainLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cardView"
         style="@style/Material_Card_View"
-        card_view:cardCornerRadius="@dimen/card_corner_radius"
-        card_view:cardElevation="@dimen/card_elevation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foreground="?android:attr/selectableItemBackground">
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="@dimen/card_corner_radius"
+        card_view:cardElevation="@dimen/card_elevation">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <FrameLayout android:layout_width="match_parent"
+
+            <FrameLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/ivFeedImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
                     android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@null"
-                    android:layout_gravity="center_horizontal|bottom" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
                     android:id="@+id/tvFeedTitle2"
                     style="@style/Material_Card_Supporting_Text_16dp"
-                    android:layout_gravity="center_horizontal|bottom"
-                    tools:text="Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
                     android:allowUndo="false"
                     android:background="#90000000"
-                    android:textColor="#ffffff"
-                    android:singleLine="true"
                     android:ellipsize="end"
-                    android:textSize="16sp" />
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    tools:text="Title" />
             </FrameLayout>
 
             <TextView
-                style="@style/Material_Card_Subtitle_24dp"
                 android:id="@+id/tvFeedSupportingText"
+                style="@style/Material_Card_Subtitle_24dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/big_padding"
                 android:textColor="@color/description_color"
                 android:textSize="@dimen/description_size"
-                tools:text="Test description"/>
+                tools:text="Test description" />
 
-            <include layout="@layout/divider"/>
+            <include layout="@layout/divider" />
 
-            <RelativeLayout android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
 
                 <TextView
+                    android:id="@+id/tvFeedtextView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Small Text"
-                    android:id="@+id/tvFeedtextView3"
-                    android:textColor="@color/description_color"
+                    android:layout_centerVertical="true"
                     android:layout_gravity="center"
-                    android:textSize="12sp"
+                    android:layout_toEndOf="@+id/left_text_button"
+                    android:layout_toRightOf="@+id/left_text_button"
+                    android:editable="true"
                     android:gravity="left|center_vertical"
                     android:paddingLeft="12dp"
-                    android:editable="true"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/left_text_button"
-                    android:layout_toEndOf="@+id/left_text_button" />
+                    android:text="Small Text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/description_color"
+                    android:textSize="12sp" />
 
                 <ImageView
+                    android:id="@+id/ivVisitCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ivVisitCount"
-                    android:src="@drawable/ic_eye_grey600_18dp"
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@+id/tvVisitCount"
                     android:layout_toStartOf="@+id/tvVisitCount"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:src="@drawable/ic_eye_grey600_18dp" />
 
                 <TextView
+                    android:id="@+id/tvVisitCount"
                     style="@style/Material_Caption"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="500"
-                    android:id="@+id/tvVisitCount"
-                    android:textColor="@color/description_color"
-                    android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="-3dp"
+                    android:layout_marginRight="10dp"
                     android:layout_toLeftOf="@+id/btn_card_main"
                     android:layout_toStartOf="@+id/btn_card_main"
-                    android:layout_marginLeft="-3dp" />
+                    android:text="500"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/description_color" />
 
                 <ImageView
+                    android:id="@+id/ivCommentCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ivCommentCount"
-                    android:src="@drawable/ic_comment_text_grey600_18dp"
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@+id/tvCommentCount"
                     android:layout_toStartOf="@+id/tvCommentCount"
-                    android:clickable="false"
                     android:adjustViewBounds="false"
-                    android:focusable="false"
                     android:allowUndo="false"
-                    android:padding="8dp" />
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_comment_text_grey600_18dp" />
 
                 <TextView
+                    android:id="@+id/tvCommentCount"
                     style="@style/Material_Caption"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="500"
-                    android:id="@+id/tvCommentCount"
-                    android:textColor="@color/description_color"
-                    android:layout_marginRight="7dp"
                     android:layout_centerVertical="true"
+                    android:layout_marginRight="7dp"
                     android:layout_toLeftOf="@+id/ivVisitCount"
                     android:layout_toStartOf="@+id/ivVisitCount"
+                    android:text="500"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/description_color"
                     android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/left_text_button"
                     style="@style/Material_Action"
-                    tools:text="Action 1"
                     android:textColor="#010101"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    tools:text="Action 1" />
 
                 <TextView
                     android:id="@+id/tvFeedRight_text_button"
@@ -146,16 +150,16 @@
                     android:visibility="gone" />
 
                 <Button
+                    android:id="@+id/btn_card_main"
                     style="@style/Base.Widget.AppCompat.ActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btn_card_main"
-                    android:layout_gravity="right|top"
-                    android:visibility="visible"
-                    android:onClick="menu"
-                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right|top"
+                    android:onClick="menu"
+                    android:visibility="visible" />
 
             </RelativeLayout>
 
@@ -163,4 +167,4 @@
 
     </android.support.v7.widget.CardView>
 
-    </FrameLayout>
+</FrameLayout>
